@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta htp-equiv="X-UA-compatible" content="IE-edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Portfolio Website</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/d710136820.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+   <div class="container">
+   <nav>
+      <img src="images/logo.png" class="logo">
+      <ul id="sidemenu">
+         <li><a href="#header">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#services">Services</a></li>
+         <li><a href="#contact">Contact</a></li>
+         <i class="fas fa-times " onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+   </nav>
+   <div class="header-text">
+   <p>Btech CSE Student</p>
+   <h1>Hey,I'am <span>Rohit</span></h1>
+
+    </div>
+   
+  </div>
+<!-------------------about------------------------------------------------------------------------------------------------->
+</div>
+<div id="about">
+   <div class="container">
+      <div class="row">
+         <div class="about-col-1">
+            <img src="images/me.jpg">
+            </div>
+           <div class="about-col-2">
+            <h1 class="sub-text">About Me</h1>
+           <p>I am first year Computer Science student
+              studying at Govt Model Engineering College<br>
+              I am passinate about studying new things and exploring different places.
+              <br>Listening to hard core rap and coding is what I do most days.
+           </p> 
+           <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+             </div>
+             <div class="tab-contents active-tab" id="skills">
+               <ul>
+                  <li><span>UI/UX</span><br>Designing App interfaces</li>
+                  <li><span>Web Development</span><br>Web app Development</li>
+                  <li><span>App Development</span><br>Building Android/ios apps</li>
+               </ul>
+             </div>
+             <div class="tab-contents" id="education">
+               <ul>
+                  <li><span>10th Grade</span><br>St Peter's Senior Secondary School</li>
+                  <li><span>12th Grade</span><br>St Vincent EMHSSS</li>
+                  <li><span>Btech in CSE</span><br>Govt Model Engineering College</li>
+               </ul>
+             </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+</div>
+<!----------------------services------------------------------------------------------------------------------------->
+<div id="services">
+   <div class="container">
+      <h1 class="sub-text">Services</h1>
+      <div class="services-list">
+      <div>
+         <i class="fa-solid fa-globe"></i>
+      <h2>Web Design</h2>
+      <p> A web designer's primary goal is to create a visually appealing and user-friendly website that meets the needs of both the client and the end-users.</p>
+      <a href="#">Learn more</a>
+      </div>
+      <div>
+         <i class="fa-solid fa-crop"></i>
+         <h2>UI/UX Design</h2>
+         <p>The UI/UX designer's role involves conducting user research, creating wireframes and prototypes, and collaborating with developers to implement their designs</p>
+         <a href="#">Learn more</a>
+         </div>
+         <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>An app designer is responsible for designing and creating the user interface (UI) and user experience (UX) of mobile applications</p>
+            <a href="#">Learn more</a>
+            </div>
+      </div>  
+   </div>
+
+</div>
+<!-----------------------contact------------------------------------------------------------------------------------------------>
+<div id="contact">
+<div class="container">
+   <div class="row">
+      <div class="contact-left">
+         <h1 class="sub-title">Contact Me</h1>
+         <p><i class="fa-solid fa-envelope"></i>rohitanish3@gmail.com</p>
+         <p><i class="fa-solid fa-phone"></i>8301037205</p>
+         <div class="social-icons">
+            <a href="https://www.instagram.com/_.rohitanish._/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rohit-anish-b6b587140/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Hackingbeast"><i class="fa-brands fa-github"></i></a>
+         </div>
+   </div>
+   <div class="contact-right">
+      <form>
+         <input type="text" name="Name" placeholder="Your Name" required>
+         <input type="email" name="email" placeholder="Your Email" required>
+         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+         <button type="submit" class="btn btn2">Submit</button>
+      </form>
+   </div>
+</div>
+</div>
+
+<script>
+
+         var tablinks=document.getElementsByClassName("tab-links");
+         var tabcontents=document.getElementsByClassName("tab-contents");
+   
+   function opentab(tabname){
+      for(tablink of tablinks){
+         tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+         tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+   } 
+
+
+</script>
+
+<script>
+
+   var sidemenu = document.getElementById("sidemenu");
+
+   function openmenu(){
+      sidemenu.style.right="0";
+   }
+   function closemenu(){
+      sidemenu.style.right="-200px";
+   }
+
+</script>
+ 
+
+</body>
+</html>  
